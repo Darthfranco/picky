@@ -1,12 +1,14 @@
 // Bump this value whenever any app file changes, then deploy all files together.
 // A release is cached in full before it can replace the previous offline copy.
-const CACHE_VERSION = '2026-10-18.8';
+const CACHE_VERSION = '2026-10-18.10';
 const APP_SCOPE = self.registration.scope;
 const CACHE_PREFIX = `picky:${APP_SCOPE}:`;
 const CACHE_NAME = `${CACHE_PREFIX}${CACHE_VERSION}`;
 const SHELL_FILES = [
     'index.html',
     'styles.css',
+    'install-guide.css',
+    'install-guide.js',
     'app.js',
     'navigation.js',
     'party-rules.js',
@@ -25,6 +27,9 @@ const SHELL_FILES = [
     'images/favicon.svg',
     'images/favicon.ico',
     'images/apple-touch-icon.png',
+    'images/apple-touch-icon-black.png',
+    'images/web-app-manifest-black-192x192.png',
+    'images/web-app-manifest-black-512x512.png',
     'images/web-app-manifest-192x192.png',
     'images/web-app-manifest-512x512.png'
 ];

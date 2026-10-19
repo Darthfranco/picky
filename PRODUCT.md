@@ -27,3 +27,5 @@ Teams balances people into 2–5 teams, at most four people each, connected by l
 ## Brand Commitments
 
 Preserve the dark Picky identity. Offer a comprehensive cream, illustrated cartoon light theme using the supplied red-accent wordmark. Every game, result, control, and menu participates in the selected theme. Favor distinct player colors, especially on the wheel.
+
+Phone home-screen icons use an opaque pure-black background behind the existing mark. Mobile browser visits begin with a concise installation guide tailored to iPhone/iPad or Android, with a quiet “Try in browser” option for the current visit. Repeat the guide on browser returns; do not persist a skip preference. Installed apps and desktop browsers open directly to the game.

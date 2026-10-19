@@ -28,6 +28,14 @@ Serve this directory with `python3 -m http.server 8000`, then open `http://local
 
 ## Offline use and releases
 
+Mobile browser visits open with a short iPhone/iPad or Android home-screen installation guide. A quiet **Try in browser** button permits the current visit; it is not saved as a permanent dismissal. The guide returns on a new visit or browser return, while desktop browsers and installed apps open directly to the game. Android offers the native install prompt when available and manual menu steps otherwise. The guide works offline with the rest of the app.
+
+The iPhone and Android install icons have fully opaque, pure-black backgrounds. Their new filenames keep installation previews from reusing the old transparent icon. A previously added iPhone icon may need to be removed and added again to pick up the new artwork.
+
+`node tools/build-icons.mjs` exports all icon sizes from the existing SVG source and checks their opacity, black edges, unchanged mark, and maskable safe area. It requires Sharp locally or in the bundled desktop runtime.
+
+Installation wording follows [Apple's Home Screen instructions](https://support.apple.com/guide/iphone/iphea86e5236/ios) and [Chrome's Android web-app instructions](https://support.google.com/chrome/answer/9658361?co=GENIE.Platform%3DAndroid&hl=en).
+
 The first online visit installs a complete offline copy. Later launches load that copy immediately, including the logo, game code, and icons, without waiting for the network. Updates download in the background and become active after existing Picky windows close. A failed update keeps the previous working copy.
 
 For every release:
@@ -78,6 +86,7 @@ node tests/number-range.browser.cjs
 node tests/group-placement.browser.cjs
 node tests/party.browser.cjs
 node tests/tournament.browser.cjs
+node tests/install.browser.cjs
 ```
 
 `CHROME_PATH` can override the Chrome executable. Browser checks cover real multitouch, all eleven game modes, team capacity and balanced remainders, ranking uniqueness, complete tournaments, settings and lifecycle resets, pins and theme persistence, fixed number-animation timing, slow-network startup, and offline reopening at both `/` and `/Picky/`.

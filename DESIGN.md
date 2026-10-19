@@ -14,6 +14,8 @@ Dice use tiny Blender mesh data rendered with perspective and shading. They are 
 
 Respect reduced motion, visible keyboard focus, safe areas, and narrow phone layouts. Theme colors must apply to menus, settings, controls, dice, fingers, wheels, dividers, roster numbers, and results. Outcome text chooses a readable foreground for its background.
 
+The mobile install guide uses the same quiet branding and theme, with brief platform-specific Home Screen steps. Keep “Try in browser” visually secondary, readable, and easy to tap. The guide repeats on mobile browser visits and returns, with no saved dismissal; it never appears in an installed app or on desktop. Home-screen icon artwork stays on a fully opaque black square so the operating system supplies its own corner mask.
+
 Teams and Ranking extend the original finger surface. Teams use shared colors and a few connecting lines; Ranking places the rank inside each dot. Keep those results in place for 1.5 seconds after everyone lifts. Teams 5+ keeps the exact tap positions and numbered roster from the existing 5+ interaction.
 
 Tournament 5+ is an automatic chooser. Between batches, show only the round name and required finger count; the final stage is explicitly “Winners bracket.” During selection, only unnumbered finger dots remain. The winner fills the background with their color and pulses in place, like Finger mode. Round changes and reset happen automatically after release and the short reading pause. Do not add ranks, a bracket dashboard, matchup tracking, next buttons, replay buttons, or result captions.

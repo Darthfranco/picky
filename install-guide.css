@@ -1,0 +1,63 @@
+#install-guide {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    height: 100dvh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    touch-action: pan-y;
+    padding-top: var(--safe-top);
+    background: var(--background-color);
+    color: var(--font-color);
+}
+#install-guide:focus { outline: none; }
+.install-content {
+    width: 100%;
+    max-width: 420px;
+    margin: auto;
+    padding: 26px 28px 30px;
+    flex-shrink: 0;
+}
+.install-brand { display: flex; align-items: center; justify-content: center; overflow: hidden; height: 74px; margin-bottom: 27px; }
+.install-brand img { width: 170px; max-width: 100%; height: auto; flex-shrink: 0; }
+.install-logo-light { display: none; }
+[data-theme="light"] .install-logo-dark { display: none; }
+[data-theme="light"] .install-logo-light { display: block; width: 145px; }
+#install-title { margin: 0 auto; max-width: 12em; text-align: center; font-size: 29px; font-weight: 700; line-height: 1.16; letter-spacing: -.025em; text-wrap: balance; }
+#install-browser-note { margin: 15px 0 0; text-align: center; color: var(--muted-color); font-size: 14px; line-height: 1.5; }
+.install-steps { list-style: none; counter-reset: install-step; margin: 35px 0 0; padding: 0; display: grid; gap: 25px; }
+.install-steps li { counter-increment: install-step; position: relative; padding-left: 35px; }
+.install-steps li::before { content: counter(install-step); position: absolute; left: 0; top: 0; color: var(--accent-color); font-size: 17px; font-weight: 650; line-height: 1.4; font-variant-numeric: tabular-nums; }
+.install-steps h2 { display: flex; align-items: center; gap: 8px; margin: 0 0 5px; font-size: 17px; font-weight: 650; line-height: 1.4; }
+.install-control-icon { width: 20px; height: 20px; flex: 0 0 20px; color: var(--muted-color); }
+.install-steps p { margin: 0; color: var(--muted-color); font-size: 14px; line-height: 1.5; }
+#install-button { display: block; width: 100%; min-height: 48px; margin: 30px 0 0; padding: 12px 18px; border-radius: 14px; background: var(--accent-color); color: var(--accent-text); font-size: 16px; font-weight: 650; }
+#install-button:disabled { opacity: .65; }
+#install-status { margin: 17px 0 0; color: var(--muted-color); text-align: center; font-size: 14px; line-height: 1.5; }
+.install-footer { position: sticky; bottom: 0; display: flex; justify-content: center; flex-shrink: 0; padding: 6px 20px var(--safe-bottom); background: var(--background-color); }
+#install-try-browser { min-height: 44px; min-width: 140px; padding: 12px 18px; border-radius: 12px; color: var(--muted-color); font-size: 14px; font-weight: 500; line-height: 20px; }
+[data-theme="light"] #install-button { box-shadow: inset 0 -3px 0 #b72e21; }
+@media (hover: hover) {
+    #install-try-browser:hover { color: var(--font-color); background: var(--surface-hover); }
+    #install-button:not(:disabled):hover { filter: brightness(1.08); }
+}
+@media (max-width: 359px) {
+    .install-content { padding-inline: 22px; }
+    #install-title { font-size: 26px; }
+    .install-steps li { padding-left: 30px; }
+}
+@media (max-height: 650px) {
+    .install-content { padding-block: 12px 20px; }
+    .install-brand { height: 56px; margin-bottom: 18px; }
+    .install-brand img { height: auto; width: 145px; }
+    [data-theme="light"] .install-logo-light { width: 125px; }
+    #install-title { font-size: 26px; }
+    .install-steps { margin-top: 25px; gap: 19px; }
+    #install-button { margin-top: 23px; }
+}
+@media (display-mode: standalone), (display-mode: fullscreen), (display-mode: minimal-ui) {
+    #install-guide { display: none !important; }
+}
